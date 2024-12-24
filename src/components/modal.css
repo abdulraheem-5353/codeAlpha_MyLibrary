@@ -1,0 +1,170 @@
+/* modal.css */
+
+.overlay {
+  min-height: 100vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000; /* Ensure overlay is on top */
+}
+
+.overlay-inner {
+  background: white;
+  width: 700px;
+  max-height: 90vh; /* Prevent content from overflowing viewport height */
+  overflow-y: auto; /* Add scroll if content is too long */
+  padding: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  border-radius: 8px; /* Add some rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.overlay-inner .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  outline: none;
+  border: none;
+  font-size: 1.5rem; /* Slightly larger close icon */
+  background-color: transparent;
+  cursor: pointer; /* Add pointer cursor */
+  color: #555; /* Slightly darker close icon */
+  transition: color 0.2s; /* Add smooth color transition */
+}
+.overlay-inner .close:hover{
+  color: black;
+}
+
+.overlay-inner .inner-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem; /* Add some space below the image */
+}
+
+.overlay-inner .inner-box img {
+  max-width: 200px; /* Make image responsive */
+  max-height: 250px;
+  object-fit: contain; /* Prevent image distortion */
+  box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+}
+
+.overlay-inner .info {
+  margin-bottom: 1rem;
+}
+
+.overlay-inner .info h1 {
+  margin-bottom: 0.5rem;
+}
+
+.overlay-inner .info h3 {
+  color: #333; /* Darker author color */
+  margin-bottom: 0.25rem;
+}
+
+.overlay-inner .info h4 {
+  color: #777; /* Lighter publisher and date color */
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.overlay-inner .info span {
+  font-style: italic;
+  margin-left: 0.5rem;
+}
+
+.overlay-inner .info a{
+  text-decoration: none;
+}
+
+.overlay-inner .info .Btn {
+  outline: none;
+  border: none;
+  padding: 0.5rem 1rem; /* Slightly larger button */
+  border-radius: 5px;
+  background-color: #007bff; /* Use a standard blue */
+  color: white;
+  font-weight: bold;
+  cursor: pointer; /* Add pointer cursor */
+  transition: background-color 0.3s ease;
+}
+
+.overlay-inner .info .Btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.overlay-inner .description {
+  margin-top: 1rem;
+  text-align: justify;
+  font-size: 1rem; /* Slightly larger description font */
+  line-height: 1.4; /* Improve readability */
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+/* Responsive styles for modal.css */
+@media (max-width: 768px) {
+  .overlay-inner {
+    width: 90%; /* Make modal width relative to screen size */
+    font-size: 1.1rem; /* Slightly reduce font size */
+    padding: 1rem; 
+  }
+
+  .overlay-inner .inner-box img {
+    max-width: 150px; /* Reduce image size */
+    max-height: 200px;
+  }
+
+  .overlay-inner .description {
+    max-height: 150px; /* Adjust max height for description */
+  }
+
+  .overlay-inner .info .Btn {
+    padding: 0.4rem 0.8rem; /* Adjust button size */
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-inner {
+    width: 95%; /* Further reduce modal width */
+    font-size: 1rem; /* Further reduce font size */
+  }
+
+  .overlay-inner .close {
+    font-size: 1.2rem; /* Adjust close button size */
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+
+  .overlay-inner .inner-box img {
+    max-width: 120px; /* Further reduce image size */
+    max-height: 150px;
+  }
+
+  .overlay-inner .info h1 {
+    font-size: 1.2rem; /* Reduce heading size */
+  }
+
+  .overlay-inner .info h3, 
+  .overlay-inner .info h4 {
+    font-size: 0.9rem; /* Adjust subheading sizes */
+  }
+
+  .overlay-inner .description {
+    max-height: 120px; /* Adjust max height for description */
+  }
+
+  .overlay-inner .info .Btn {
+    padding: 0.3rem 0.6rem; /* Adjust button size further */
+    font-size: 0.8rem;
+  }
+}
