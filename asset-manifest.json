@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/codeAlpha_MyLibrary/static/css/main.bf3e2cfd.css",
+    "main.js": "/codeAlpha_MyLibrary/static/js/main.56bc9d12.js",
+    "static/media/bg2.png": "/codeAlpha_MyLibrary/static/media/bg2.fa44efe5b0a3e7f43340.png",
+    "static/media/bg1.jpeg": "/codeAlpha_MyLibrary/static/media/bg1.64271b500f791589a10e.jpeg",
+    "index.html": "/codeAlpha_MyLibrary/index.html",
+    "main.bf3e2cfd.css.map": "/codeAlpha_MyLibrary/static/css/main.bf3e2cfd.css.map",
+    "main.56bc9d12.js.map": "/codeAlpha_MyLibrary/static/js/main.56bc9d12.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf3e2cfd.css",
+    "static/js/main.56bc9d12.js"
+  ]
+}
